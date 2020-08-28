@@ -43,6 +43,22 @@ body {
 
 }
 
+.root-controller .box-controller .selected-controller {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  /* background-color: rgb(191, 248, 248,0.7); */
+
+}
+
+
+
 
 
 .root-controller .box-container {

@@ -13,16 +13,20 @@ class App extends Component {
     }
   }
 
-  showRegisterBox(){
+  showRegisterBox(e){
     this.setState({
       isRegisterOpen: true, isLoginOpen:false
-    })
+    });
+
+    // e.target.style.backgroundColor = 'rgb(202, 253, 253)'
   }
 
-  showLoginBox(){
+  showLoginBox(e){
     this.setState({
       isLoginOpen: true, isRegisterOpen: false
     })
+    // e.target.style.color = 'blue';
+    // e.target.style.backgroundColor = 'rgb(202, 253, 253)'
   }
   
 
@@ -33,11 +37,11 @@ class App extends Component {
         <div className = "root-controller">
 {/* {"controller" + (this.state.isRegisterOpen ? "selected-controller":"")}  */}
           <div className = "box-controller">
-            <div className = "controller"
+            <div className =  {(this.state.isLoginOpen ? "selected-controller":"controller")} 
                  onClick = {this.showLoginBox.bind(this)}>
               <p>Login</p>
             </div>
-            <div className ="controller"
+            <div className =  {(this.state.isRegisterOpen ? "selected-controller":"controller")} 
                  onClick = {this.showRegisterBox.bind(this)}>
               <p>Register</p>
             </div>
